@@ -1,14 +1,14 @@
-/vendor
-/node_modules
-/.idea
-/.vscode
-/public/storage
-/public/hot
-/storage/*.key
-.env
-.env.*
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
+echo "/vendor" > .gitignore
+echo "/node_modules" >> .gitignore
+echo "/.idea" >> .gitignore
+echo "/.vscode" >> .gitignore
+echo "/public/storage" >> .gitignore
+echo "/public/hot" >> .gitignore
+echo "/storage/*.key" >> .gitignore
+echo ".env" >> .gitignore
+echo ".env.*" >> .gitignore
+echo "Homestead.json" >> .gitignore
+echo "Homestead.yaml" >> .gitignore
+echo "npm-debug.log" >> .gitignore
+echo "yarn-error.log" >> .gitignore
 
