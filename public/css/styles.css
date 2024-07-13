@@ -6,6 +6,10 @@
     --color-primary: #B06F1F;
     --color-footer: #0D0300;
     --color-menu-bg: white;
+    --primary-color: #B06F1F;
+    --footer-bg-color: #0D0300;
+    --font-family-heading: 'Oleo Script Swash Caps', cursive;
+    --font-family-body: 'Roboto', sans-serif;
 }
 *{
     margin: 0;
@@ -21,6 +25,7 @@ h2{
     text-align: center;
     margin: 30px;
     font-size: 2em;
+    font-weight: 200;
 }
 a{
     text-align: center;
@@ -76,59 +81,121 @@ header{
     color: #ffc107; /* Change color on hover if needed */
 }
 
-/* Footer */
-footer {
-    background-color: var(--color-footer); /* Dark brown */
-    color: white;
-    padding: 20px 0;
-}
+/* Footer */ footer {
+        background-color: var(--footer-bg-color);
+        color: #ffffff; /* Text color for footer */
+        font-family: var(--font-family-body);
+        padding: 30px 0;
+    }
 
-.footer-columns {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 
-.footer-logo {
-    flex: 1;
-}
+    .footer-columns {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
 
-.footer-logo .logo {
-    font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 2em;
-    color: white; /* White color for logo */
-}
+    .footer-logo {
+        flex: 1 0 300px; /* Adjust width as needed */
+        margin-bottom: 20px;
+    }
 
-.footer-links {
-    flex: 2;
-}
+    .footer-logo .logo {
+        font-family: var(--font-family-heading);
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
 
-.footer-links ul {
-    list-style-type: none;
-    padding: 0;
-}
+    .footer-contact,
+    .footer-open-days,
+    .footer-social {
+        margin-bottom: 20px;
+    }
 
-.footer-links ul li {
-    margin-bottom: 10px;
-}
+    .footer-links {
+        flex: 1 0 200px; /* Adjust width as needed */
+        margin-bottom: 20px;
+    }
 
-.footer-links ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+    .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
 
-.footer-links ul li a:hover {
-    color: var(--color-primary); /* Change color on hover if needed */
-}
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
 
-.footer-subscribe {
-    flex: 1;
-}
+    .footer-links ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 
-.footer-subscribe p {
-    margin-bottom: 10px;
-}
+    .footer-links ul li a:hover {
+        color: var(--primary-color);
+    }
+
+    .footer-subscribe {
+        flex: 1 0 300px; /* Adjust width as needed */
+        margin-bottom: 20px;
+    }
+
+    .footer-subscribe form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-subscribe label {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
+
+    .footer-subscribe input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid var(--primary-color);
+        background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+        color: #ffffff;
+    }
+
+    .footer-subscribe input[type="email"]::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-subscribe button {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .footer-subscribe button:hover {
+        background-color: #964B00; /* Darker shade for hover effect */
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #707070; /* Separator line */
+    }
+
+    .footer-bottom p {
+        font-size: 0.9rem;
+        color: #808080;
+    }
 
 /* General Button Style */
 .button {
@@ -232,6 +299,7 @@ footer {
 }
 
 .about-section {
+    margin-top: 50px;
     padding: 50px 0; /* Adjust padding as needed */
     background-color: #fff; /* Background color */
     height: 60vh; /* Adjusted to 60% of viewport height */

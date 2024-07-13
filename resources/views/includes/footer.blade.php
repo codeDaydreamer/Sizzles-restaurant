@@ -3,8 +3,26 @@
 <footer>
     <div class="container">
         <div class="footer-columns">
+        <div class="footer-logo">
+                <p class="logo">Sizzles & Sage</p>
+                <p class="footer-contact">
+                    1234, Flavor Town, NBO 56789<br>
+                    Phone: +254 792803063<br>
+                    Email: info@sizzleandsage.com
+                </p>
+        </div>
             <div class="footer-logo">
-                <p class="logo">Sizzles</p>
+
+
+                <p class="footer-open-days">
+                    <strong>Open Days</strong><br>
+                    Monday - Friday: 11:00 AM - 10:00 PM<br>
+                    Saturday - Sunday: 10:00 AM - 11:00 PM
+                </p>
+                <p class="footer-social">
+                    <strong>Follow Us</strong><br>
+                    <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+                </p>
             </div>
             <div class="footer-links">
                 <ul>
@@ -16,10 +34,16 @@
                 </ul>
             </div>
             <div class="footer-subscribe">
-                <p>Contact Us</p>
-                <p>Open Days</p>
-                <!-- Newsletter subscription form can be added here -->
+                <form action="#" method="POST">
+                    <label for="email">Subscribe to our Newsletter</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
         </div>
     </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Sizzles & Sage. All Rights Reserved. Designed and Developed by KevKaranja.</p>
+    </div>
 </footer>
+

@@ -9,10 +9,12 @@
 </section>
 
 <section class="about-section">
+
     <div class="container">
+    <h2>Welcome to Sizzles & Sage</h2>
         <div class="about-columns">
             <div class="about-text">
-                <h2>Welcome to Sizzles & Sage</h2>
+
                 <p style="padding:10px;font: size 2em;line: height 2em;">Welcome to Sizzles & Sage, your premier dining destination located in the heart of Flavour Town. For
                     over 20 years, we have been delighting our guests with exquisite culinary experiences, blending
                     traditional recipes with modern flavors. Our commitment to using the finest ingredients, paired with

@@ -12,9 +12,10 @@
 </section>
 <section class="about-section">
     <div class="container">
+    <h2>Welcome to Sizzles & Sage</h2>
         <div class="about-columns">
             <div class="about-text">
-                <h2>Welcome to Sizzles & Sage</h2>
+
                 <p style="padding:10px;font: size 2em;line: height 2em;">Welcome to Sizzles & Sage, your premier dining
                     destination located in the heart of Flavour Town. For
                     over 20 years, we have been delighting our guests with exquisite culinary experiences, blending
@@ -24,7 +25,7 @@
                     of excellence that has made Sizzles & Sage a beloved spot in our community.</p>
                 <div class="cta-buttons">
                     <a href="{{ route('menu') }}" class="button">Visit Menu</a>
-                    <a href="{{ route('book') }}" class="button">Make a Reservation</a>
+                    <a href="{{ route('about') }}" class="button">Learn More ...</a>
                 </div>
             </div>
             <div class="about-images">
@@ -105,7 +106,7 @@
             </div>
         </div>
         </div>
-        
+
     </div>
 
 </section>
