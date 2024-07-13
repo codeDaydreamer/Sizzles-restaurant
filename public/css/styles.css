@@ -33,6 +33,7 @@ a{
 section{
     padding-left: 30px;
     padding-right: 30px;
+    background-color: #ffffff;
 
 }
 header{
@@ -92,6 +93,7 @@ header{
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
+        height: auto;
     }
 
     .footer-columns {
@@ -344,8 +346,8 @@ header{
 
 
 .featured-events {
-    background-color: var(--color-footer); /* Dark background color */
-    color: #fff; /* Text color */
+    background-color:azure; /* Dark background color */
+    color:var(--primary-color); /* Text color */
     text-align: center;
     padding: 50px 0; /* Adjust padding as needed */
     overflow: hidden; /* Ensure overlay doesn't expand */
@@ -364,6 +366,7 @@ header{
     overflow: hidden;
     margin: 20px; /* Adjust spacing */
     height: 70vh; /* Adjusted to 70% of viewport height */
+    border-radius: 20px;
 }
 
 .event-image {

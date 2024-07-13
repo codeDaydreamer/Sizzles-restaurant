@@ -34,7 +34,7 @@
     </div>
 </section>
 
-<section class="featured-events" style="height: 70vh;">
+<section class="featured-events" style="height: 90vh;">
     <div class="container">
     <h2 style="font-family: 'Oleo Script Swash Caps', cursive; font-size: 2em;">Featured Events</h2>
 

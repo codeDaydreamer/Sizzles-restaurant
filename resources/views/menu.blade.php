@@ -18,7 +18,7 @@
             <h3 class="menu-section-heading">Appetizers</h3>
             <div class="menu-items">
                 <div class="menu-item">
-                    <img src="{{ asset('images/event1.jpeg') }}" alt="Appetizer 1">
+                    <img src="{{ asset('images/appetizer1.jpg') }}" alt="Appetizer 1">
                     <div class="menu-item-details">
                         <p class="menu-item-name">Appetizer 1</p>
                         <p class="menu-item-price">$10.99</p>
@@ -62,13 +62,39 @@
         <section id="main-courses" class="menu-section">
             <h3 class="menu-section-heading">Main Courses</h3>
                 <!-- Insert Main Courses Menu Items Here -->
+                <div class="menu-items">
                 <div class="menu-item">
-                    <img src="{{ asset('images/event1.jpeg') }}" alt="Appetizer 1">
+                    <img src="{{ asset('images/main1.jpg') }}" alt="Appetizer 1">
                     <div class="menu-item-details">
-                        <p class="menu-item-name">Appetizer 1</p>
+                        <p class="menu-item-name">Steak</p>
                         <p class="menu-item-price">$10.99</p>
                         <a href="#" class="button">Order Now</a>
                     </div>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ asset('images/main2.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ asset('images/main3.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ asset('images/main4.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
                 </div>
 
         </section>
@@ -77,6 +103,38 @@
         <section id="desserts" class="menu-section">
             <h3 class="menu-section-heading">Desserts</h3>
             <div class="menu-items">
+            <div class="menu-item">
+                    <img src="{{ asset('images/dessert1.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ asset('images/dessert2.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ asset('images/dessert3.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ asset('images/desert4.jpg') }}" alt="Dessert 4">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
                 <!-- Insert Desserts Menu Items Here -->
             </div>
         </section>
@@ -85,6 +143,38 @@
         <section id="drinks" class="menu-section">
             <h3 class="menu-section-heading">Drinks</h3>
             <div class="menu-items">
+            <div class="menu-item">
+                    <img src="{{ asset('images/drink1.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ asset('images/drink2.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ asset('images/drink3.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ asset('images/drink4.jpg') }}" alt="Appetizer 1">
+                    <div class="menu-item-details">
+                        <p class="menu-item-name">Steak</p>
+                        <p class="menu-item-price">$10.99</p>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                </div>
                 <!-- Insert Drinks Menu Items Here -->
             </div>
         </section>
