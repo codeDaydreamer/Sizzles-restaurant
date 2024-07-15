@@ -1,16 +1,14 @@
-
-
 <footer>
     <div class="container">
         <div class="footer-columns">
-        <div class="footer-logo">
+            <div class="footer-logo">
                 <p class="logo">Sizzles & Sage</p>
                 <p class="footer-contact">
                     1234, Flavor Town, NBO 56789<br>
                     Phone: +254 792803063<br>
                     Email: info@sizzleandsage.com
                 </p>
-        </div>
+            </div>
             <div class="footer-logo">
 
 
@@ -34,7 +32,8 @@
                 </ul>
             </div>
             <div class="footer-subscribe">
-                <form action="#" method="POST">
+                <form action="{{ route('subscribe') }}" method="POST">
+                    @csrf
                     <label for="email">Subscribe to our Newsletter</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
@@ -46,4 +45,3 @@
         <p>&copy; 2024 Sizzles & Sage. All Rights Reserved. Designed and Developed by KevKaranja.</p>
     </div>
 </footer>
-

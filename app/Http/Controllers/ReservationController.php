@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reservation; // Adjusted model import
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -15,11 +16,13 @@ class ReservationController extends Controller
             'phone' => 'required|string|max:20',
             'date' => 'required|date',
             'time' => 'required',
+            'people' => 'required|integer|min:1', // Correct validation for number of people
         ]);
 
-        // Process the reservation logic (e.g., save to database, send email, etc.)
+        // Save reservation to the database
+        Reservation::create($validated);
 
-        // Redirect back with success message
-        return redirect()->back()->with('success', 'Reservation submitted successfully!');
+        // Return the reservation view with success message
+        return view('book')->with('success', 'Reservation submitted successfully!');
     }
 }

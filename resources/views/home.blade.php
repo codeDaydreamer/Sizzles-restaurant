@@ -46,7 +46,7 @@
                     <div class="menu-item-details">
                         <p class="menu-item-name">Steak</p>
                         <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
+                        <a href="{{ route('menu') }}" class="button">Visit Menu</a>
                     </div>
                 </div>
                 <div class="menu-item">
@@ -54,7 +54,7 @@
                     <div class="menu-item-details">
                         <p class="menu-item-name">Steak</p>
                         <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
+                        <a href="{{ route('menu') }}" class="button">Visit Menu</a>
                     </div>
                 </div>
                 <div class="menu-item">
@@ -62,7 +62,7 @@
                     <div class="menu-item-details">
                         <p class="menu-item-name">Steak</p>
                         <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
+                        <a href="{{ route('menu') }}" class="button">Visit Menu</a>
                     </div>
                 </div>
                 <div class="menu-item">
@@ -70,7 +70,7 @@
                     <div class="menu-item-details">
                         <p class="menu-item-name">Steak</p>
                         <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
+                        <a href="{{ route('menu') }}" class="button">Visit Menu</a>
                     </div>
                 </div>
         </div>

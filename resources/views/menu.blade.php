@@ -5,6 +5,14 @@
     <div class="container">
         <h2 class="menu-heading">Menu</h2>
 
+        @if (session('success'))
+        <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="alert alert-success" style="margin-bottom: 0;">
+                {{ session('success') }}
+            </div>
+        </div>
+        @endif
+
         <!-- Menu Categories -->
         <div class="menu-categories">
             <a href="#appetizers" class="menu-category">Appetizers</a>
@@ -17,125 +25,65 @@
         <section id="appetizers" class="menu-section">
             <h3 class="menu-section-heading">Appetizers</h3>
             <div class="menu-items">
+                @foreach ($appetizers as $appetizer)
                 <div class="menu-item">
-                    <img src="{{ asset('images/appetizer1.jpg') }}" alt="Appetizer 1">
+                    <img src="{{ asset($appetizer->image) }}" alt="{{ $appetizer->name }}">
                     <div class="menu-item-details">
-                        <p class="menu-item-name">Appetizer 1</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
+                        <p class="menu-item-name">{{ $appetizer->name }}</p>
+                        <p class="menu-item-price">${{ $appetizer->price }}</p>
+                        <form action="{{ route('placeOrder') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="item_name" value="{{ $appetizer->name }}">
+                            <input type="hidden" name="item_price" value="{{ $appetizer->price }}">
+                            <button type="submit" class="button">Order Now</button>
+                        </form>
                     </div>
                 </div>
-                <!-- Repeat for other appetizers -->
-                <!-- Example -->
-                <div class="menu-item">
-                    <img src="{{ asset('images/appetizer2.jpg') }}" alt="Appetizer 2">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Appetizer 2</p>
-                        <p class="menu-item-price">$12.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
-                <!-- Repeat for other appetizers -->
-                <!-- Example -->
-                <div class="menu-item">
-                    <img src="{{ asset('images/appetizer3.jpg') }}" alt="Appetizer 3">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Appetizer 3</p>
-                        <p class="menu-item-price">$9.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
-                <!-- Repeat for other appetizers -->
-                <!-- Example -->
-                <div class="menu-item">
-                    <img src="{{ asset('images/appetizer4.jpg') }}" alt="Appetizer 4">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Appetizer 4</p>
-                        <p class="menu-item-price">$11.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
 
         <!-- Main Courses Section -->
         <section id="main-courses" class="menu-section">
             <h3 class="menu-section-heading">Main Courses</h3>
-                <!-- Insert Main Courses Menu Items Here -->
-                <div class="menu-items">
+            <div class="menu-items">
+                @foreach ($mainCourses as $mainCourse)
                 <div class="menu-item">
-                    <img src="{{ asset('images/main1.jpg') }}" alt="Appetizer 1">
+                    <img src="{{ asset($mainCourse->image) }}" alt="{{ $mainCourse->name }}">
                     <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
+                        <p class="menu-item-name">{{ $mainCourse->name }}</p>
+                        <p class="menu-item-price">${{ $mainCourse->price }}</p>
+                        <form action="{{ route('placeOrder') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="item_name" value="{{ $mainCourse->name }}">
+                            <input type="hidden" name="item_price" value="{{ $mainCourse->price }}">
+                            <button type="submit" class="button">Order Now</button>
+                        </form>
                     </div>
                 </div>
-                <div class="menu-item">
-                    <img src="{{ asset('images/main2.jpg') }}" alt="Appetizer 1">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="{{ asset('images/main3.jpg') }}" alt="Appetizer 1">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="{{ asset('images/main4.jpg') }}" alt="Appetizer 1">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
-                </div>
-
+                @endforeach
+            </div>
         </section>
 
         <!-- Desserts Section -->
         <section id="desserts" class="menu-section">
             <h3 class="menu-section-heading">Desserts</h3>
             <div class="menu-items">
-            <div class="menu-item">
-                    <img src="{{ asset('images/dessert1.jpg') }}" alt="Appetizer 1">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
+                @foreach ($desserts as $dessert)
                 <div class="menu-item">
-                    <img src="{{ asset('images/dessert2.jpg') }}" alt="Appetizer 1">
+                    <img src="{{ asset($dessert->image) }}" alt="{{ $dessert->name }}">
                     <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
+                        <p class="menu-item-name">{{ $dessert->name }}</p>
+                        <p class="menu-item-price">${{ $dessert->price }}</p>
+                        <form action="{{ route('placeOrder') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="item_name" value="{{ $dessert->name }}">
+                            <input type="hidden" name="item_price" value="{{ $dessert->price }}">
+                            <button type="submit" class="button">Order Now</button>
+                        </form>
                     </div>
                 </div>
-                <div class="menu-item">
-                    <img src="{{ asset('images/dessert3.jpg') }}" alt="Appetizer 1">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="{{ asset('images/desert4.jpg') }}" alt="Dessert 4">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
-                <!-- Insert Desserts Menu Items Here -->
+                @endforeach
             </div>
         </section>
 
@@ -143,39 +91,21 @@
         <section id="drinks" class="menu-section">
             <h3 class="menu-section-heading">Drinks</h3>
             <div class="menu-items">
-            <div class="menu-item">
-                    <img src="{{ asset('images/drink1.jpg') }}" alt="Appetizer 1">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
+                @foreach ($drinks as $drink)
                 <div class="menu-item">
-                    <img src="{{ asset('images/drink2.jpg') }}" alt="Appetizer 1">
+                    <img src="{{ asset($drink->image) }}" alt="{{ $drink->name }}">
                     <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
+                        <p class="menu-item-name">{{ $drink->name }}</p>
+                        <p class="menu-item-price">${{ $drink->price }}</p>
+                        <form action="{{ route('placeOrder') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="item_name" value="{{ $drink->name }}">
+                            <input type="hidden" name="item_price" value="{{ $drink->price }}">
+                            <button type="submit" class="button">Order Now</button>
+                        </form>
                     </div>
                 </div>
-                <div class="menu-item">
-                    <img src="{{ asset('images/drink3.jpg') }}" alt="Appetizer 1">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="{{ asset('images/drink4.jpg') }}" alt="Appetizer 1">
-                    <div class="menu-item-details">
-                        <p class="menu-item-name">Steak</p>
-                        <p class="menu-item-price">$10.99</p>
-                        <a href="#" class="button">Order Now</a>
-                    </div>
-                </div>
-                <!-- Insert Drinks Menu Items Here -->
+                @endforeach
             </div>
         </section>
     </div>

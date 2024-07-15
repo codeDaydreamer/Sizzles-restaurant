@@ -2,11 +2,17 @@
 
 @section('content')
 <section class="contact-us-page" style="background-image: url('{{ asset('images/contact.jpg') }}');">
-    <div class="contact-us-background" >
+    <div class="contact-us-background">
         <div class="container">
             <div class="contact-us-content">
                 <h2>Contact Us</h2>
                 <p>Have questions or feedback? Reach out to us using the form below or visit our location.</p>
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
                 <div class="contact-form">
                     <form action="{{ route('submitContact') }}" method="POST" id="contactForm">
                         @csrf
@@ -36,7 +42,7 @@
                     </div>
                     <div class="contact-column">
                         <h3>Call Us</h3>
-                        <p>+1 (123) 456-7890</p>
+                        <p>+254792803063</p>
                     </div>
                 </div>
             </div>
